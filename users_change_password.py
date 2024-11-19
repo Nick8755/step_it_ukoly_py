@@ -58,6 +58,10 @@ def delete_user(username, password):
         write_data(data)
 
 
-register('nikita', 'heslo4', 'heslo4')
+#register('jarda', 'heslo5', 'heslo5')
+#print value from hash code
+#print(hash_password('heslo4'))
 #delete_user('jana', 'heslo2')
 #change_password('milan', 'heslo3', 'new_heslo', 'new_heslo')
+
+
