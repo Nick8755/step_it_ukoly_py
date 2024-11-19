@@ -1,8 +1,12 @@
 # users_change_password.py
 
-import os, json
+import os, json, hashlib
 
 DATA_PATH = 'users.json'
+
+def hash_password(password):
+    hash_value = hashlib.sha256(password.encode()).hexdigest()
+    return hash_value
 
 def read_data():
     with open(DATA_PATH, encoding='utf-8') as file:
@@ -24,7 +28,7 @@ def register(username, password, password_repeat):
     check_password(password, password_repeat)
     data = read_data()
     check_username(data, username)
-    data[username] = password
+    data[username] = hash_password(password)
     write_data(data)
 
 def login(username, password):
@@ -54,6 +58,6 @@ def delete_user(username, password):
         write_data(data)
 
 
-#register('kuba', 'heslo', 'heslo')
+register('nikita', 'heslo4', 'heslo4')
 #delete_user('jana', 'heslo2')
-change_password('milan', 'heslo3', 'new_heslo', 'new_heslo')
+#change_password('milan', 'heslo3', 'new_heslo', 'new_heslo')
