@@ -10,3 +10,4 @@ meks
 weks
 last
 last na druhou
+blex
