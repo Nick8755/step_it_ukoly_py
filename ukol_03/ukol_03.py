@@ -9,7 +9,7 @@ def generate_first_days():
         dates.append(date) # append date to list
     return dates
 
-with open("03_dates.txt", "w") as file:
+with open("03_dates.txt", "w", encoding="utf-8") as file:
     for date in generate_first_days():
         file.write(date + "\n") # write to file
 
