@@ -3,6 +3,7 @@
 #stát s nejvyšším počtem a nejnižším počtem
 
 import numpy as np
+import matplotlib.pyplot as plt
 
 countries = {
     "Irsko": 4593100,

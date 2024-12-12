@@ -11,7 +11,7 @@ a_element = """
 
 
 def gen_list():
-    with open('08/data.json', encoding='utf-8') as file:
+    with open(r'C:\Users\Nikita Abramenko\step_it\group06\08\data.json', encoding='utf-8') as file:
         data = json.load(file)
         
         result = ''
@@ -30,14 +30,13 @@ def gen_list():
 
 def save_list():
     list_html = gen_list()
-    # print(list_html)
+    print(list_html)
 
-    with open('09/list.html', encoding='utf-8') as file:
+    with open('list.html', encoding='utf-8') as file:
         html = file.read()
         html = html.replace('<!-- HTML -->', list_html)
     
-    with open('09/list2.html', mode='w', encoding='utf-8') as file:
+    with open('list2.html', mode='w', encoding='utf-8') as file:
         file.write(html)
-
 
 save_list()
