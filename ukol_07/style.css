@@ -61,24 +61,42 @@ body {
     padding-bottom: 5px;
   }
   
-  @media (max-width: 360px) {
+  @media (max-width: 768px) {
+    body {
+        margin: 4px;
+        padding: 4px;
+        overflow-x: hidden; 
+    }
+
     h1 {
-      font-size: 1.5rem;
-      padding: 0 15px; 
+        font-size: 1.5rem;
+        padding: 0 0px; 
+        text-align: center; 
     }
-  
+
     .container {
-      grid-template-columns: 1fr; 
-      padding: 10px; 
-      justify-content: center;
-      padding: 4;
+        display: flex; 
+        flex-direction: column; 
+        align-items: center;  
+        padding: 10px; 
     }
-  
+
+    .card {
+        box-sizing: border-box; 
+        max-width: 95%; 
+        margin: 0 auto;  
+        background-color: #ffffff; 
+        border-radius: 10px; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    }
+
     .card img {
-      margin-bottom: 10px; 
+        width: 90%; 
+        height: auto;
     }
-  
+
     .card h2 {
-      font-size: 1rem; 
+        font-size: 1rem; 
+        text-align: center; 
     }
-  }
+}
