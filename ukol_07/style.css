@@ -100,3 +100,10 @@ body {
         text-align: center; 
     }
 }
+
+.map-container {
+  flex: 1 1 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: rem;
+}
