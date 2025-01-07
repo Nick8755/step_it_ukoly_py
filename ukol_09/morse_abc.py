@@ -42,7 +42,7 @@ class Morse:
         return '   '.join(encode_words) # slova spojíme do věty
 
     def decode(self, morse):
-        """ implementuj tuto metodu, decode znamená dekódovat """
+        """ implementuji metodu decode """
         words = morse.split('   ') # rozdělíme text na slova
         decoded_words = []
         for word in words:
