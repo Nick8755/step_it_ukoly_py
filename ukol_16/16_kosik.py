@@ -15,7 +15,7 @@ Snažte se, aby to bylo jednoduché a přímočaré na použití
 
 soubor pojmenujte 16_kosik.py
 '''
-# fhffggfggf
+
 class Zbozi:
     counter = 0
     def __init__(self, nazev: str, cena: float): # produkty v e-shopu
