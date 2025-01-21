@@ -20,6 +20,7 @@ class Zbozi:
     counter = 0
     def __init__(self, nazev: str, cena: float): # produkty v e-shopu
         self.__class__.counter += 1 # vypocet ID produktu
+
         self.id = self.__class__.counter # prirazeni ID
         self.nazev = nazev
         self.cena = cena
@@ -56,12 +57,29 @@ class Kosik:
 
 if __name__ == "__main__":
     kosik = Kosik()
-
+    kosik2 = Kosik()
+    # vytvoreni nabidky e-shopu
     kafe = Zbozi("Kafe", 100)
     pivo = Zbozi("Pivo", 50)
     kebab = Zbozi("Kebab", 120)
+    pizza = Zbozi("Pizza", 150)
+    rohlik = Zbozi("Rohlik", 5)
+    mattoni = Zbozi("Mattoni", 20)
+
 
     kosik.pridej_zbozi(kafe, 2)
     kosik.pridej_zbozi(pivo)
+    kosik.pridej_zbozi(pizza)
+
+    kosik2.pridej_zbozi(kafe, 3)
+    kosik2.pridej_zbozi(rohlik, 10)
+    kosik2.pridej_zbozi(mattoni, 5)
 
     kosik.vytiskni_fakturu()
+    kosik2.vytiskni_fakturu()
+
+    kosik.odeber_zbozi(kafe)
+    kosik2.odeber_zbozi(rohlik, 5)
+
+    kosik.vytiskni_fakturu()
+    kosik2.vytiskni_fakturu()
