@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Výpočet věku</title>
+  <!-- Link to Pico.css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+
+  <main class="container">
+    <h1>Zjištění věku</h1>
+    <form method="GET" style="max-width: 400px;">
+      <label for="birth_year">Zadejte rok narození</label>
+      <input
+        type="number"
+        name="birth_year"
+        id="birth_year"
+        placeholder="např. 1990"
+        min="1900"
+        max="{{ current_year }}"
+        required
+      >
+
+      <button type="submit">Odeslat</button>
+    </form>
+
+    {% if message %}
+      <article style="margin-top: 1rem;">
+        <p><strong>{{ message }}</strong></p>
+      </article>
+    {% endif %}
+  </main>
+
+</body>
+</html>
