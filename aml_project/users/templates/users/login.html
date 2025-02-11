@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAS Finance - Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+         integrity=sha384-dyZtO3nZKC3x4lITVMfaTQld9sJD1XDdK3hO+po90Z5VugVSJX2tUgXf7VoX1swp"
+          crossorigin="anonymous">
+</head>
+<body>
+<section class="hero is-fullheight is-light">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="columns is-4-desktop">
+          <div class="box has-text-centered">
+            <h1 class="title is-4 has-text-centered">Company Login</h1>
+            <form action="{% url 'login' %}" method="POST">
+                {% csrf_token %}
+
+              <div class="field">
+                <p class="control has-icons-left">
+                  <input class="input" type="text" placeholder="Username" name="username">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                  </span>
+                </p>
+                {% if form.username.errors %}
+                    <p class="help is-danger">{{ form.username.errors }}</p>
+                    {% endif %}
+                </div>
+
+              <div class="field">
+                <p class="control has-icons-left">
+                  <input class="input" type="password" placeholder="Password" name="password">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </p>
+                {% if form.username.errors %}
+                    <p class="help is-danger">{{ form.username.errors }}</p>
+                    {% endif %}
+                </div>
+
+              {% if form.non_field_errors %}
+                <p class="help is-danger">{{ form.non_field_errors }}</p>
+              {% endif %}
+
+              <div class="field">
+                <p class="control">
+                  <button class="button is-success is-fullwidth" type="submit">Login</button>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

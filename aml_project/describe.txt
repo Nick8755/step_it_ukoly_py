@@ -1,0 +1,22 @@
+1) Cíl: vytvořit program, který umožní vypočitat rizikový score pro konkretního klienta či tarnsakci
+
+2)Scoring se začiná z vyběru urcité kategorie, je jich 8 které jsou daný a nemění se (celkem 8 kategorií)
+Každá z 8 kategorií má svoje parametry, které se skladají
+z faktorů, které nasledné mají vlastní váhový koeficient, který se může měnit
+
+3) Vstupem programu je výběr kategorie a následně vstupní data, které se vztahují k dané kategorii
+
+4) Výstupem programu je výpočet rizikového skore, které je vypočítáno na základě vstupních dat a váhových koeficientů
+Výstupem je číslo, které reprezentuje rizikové skore, které se
+rozdelí na 3 kategorie:
+- nízké riziko
+- střední riziko
+- vysoké riziko
+
+Stranktura programu:
+ - Login Page
+ - Admin Page (CRUD custom (Unfold ?))
+ - Main Page (Ppřehled existujících klientů a transakcí)
+ - Create Page (Vytvoření nového klienta či transakce)
+
+ DB - PostgresSQL
